@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const lottoBtn = document.getElementById('generate-lotto');
-  const lottoDisplay = document.getElementById('lotto-numbers');
+  const lottoResults = document.getElementById('lotto-results');
   
   const currentTheme = localStorage.getItem('theme') || 'light';
 
@@ -20,8 +20,28 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
   }
 
-  // Lotto logic
+  // Lotto logic: Generate 5 sets
   lottoBtn.addEventListener('click', () => {
+    lottoResults.innerHTML = ''; // Clear previous results
+
+    for (let i = 0; i < 5; i++) {
+      const numbers = generateLottoNumbers();
+      const row = document.createElement('div');
+      row.className = 'numbers-row';
+      
+      numbers.forEach(num => {
+        const ball = document.createElement('div');
+        ball.className = 'lotto-ball';
+        ball.textContent = num;
+        ball.style.backgroundColor = getBallColor(num);
+        row.appendChild(ball);
+      });
+      
+      lottoResults.appendChild(row);
+    }
+  });
+
+  function generateLottoNumbers() {
     const numbers = [];
     while (numbers.length < 6) {
       const num = Math.floor(Math.random() * 45) + 1;
@@ -29,18 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
         numbers.push(num);
       }
     }
-    numbers.sort((a, b) => a - b);
-    
-    lottoDisplay.innerHTML = '';
-    numbers.forEach(num => {
-      const ball = document.createElement('div');
-      ball.className = 'lotto-ball';
-      ball.textContent = num;
-      // Vary color based on number range
-      ball.style.backgroundColor = getBallColor(num);
-      lottoDisplay.appendChild(ball);
-    });
-  });
+    return numbers.sort((a, b) => a - b);
+  }
 
   function getBallColor(num) {
     if (num <= 10) return '#fbc400'; // Yellow
