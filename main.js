@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (num <= 10) return '#fbc400'; // Yellow
     if (num <= 20) return '#69c8f2'; // Blue
     if (num <= 30) return '#ff7272'; // Red
-    if (num <= 40) return '#aaa';    // Grey
+    if (num <= 40) return '#a4a4a4'; // Grey
     return '#b0d840';                // Green
   }
 });

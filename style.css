@@ -1,89 +1,156 @@
 :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --button-bg: #f0f0f0;
-  --button-text: #333333;
+  --bg-color: #f8f9fa;
+  --text-color: #343a40;
+  --button-bg: #ffffff;
+  --button-text: #343a40;
+  --accent-color: #007bff;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
-  --bg-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --button-bg: #333333;
-  --button-text: #f0f0f0;
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --button-bg: #1e1e1e;
+  --button-text: #e0e0e0;
+  --card-bg: #1e1e1e;
+  --shadow-color: rgba(0, 0, 0, 0.5);
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: var(--accent-color);
 }
 
 button {
   background-color: var(--button-bg);
   color: var(--button-text);
-  border: 1px solid #ccc;
-  padding: 10px 20px;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 12px 24px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+[data-theme='dark'] button {
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 button:hover {
-  opacity: 0.8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .lotto-container {
-  margin-top: 50px;
+  background-color: var(--card-bg);
+  margin-top: 20px;
   text-align: center;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
+  padding: 40px;
+  border: none;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .results-container {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 25px;
-  min-height: 50px;
+  margin-bottom: 30px;
+  min-height: 60px;
   align-items: center;
+  justify-content: center;
 }
 
 .numbers-row {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
-  padding: 10px;
-  border-bottom: 1px dashed #eee;
-  width: 100%;
+  padding: 12px;
+  background-color: rgba(0,0,0,0.03);
+  border-radius: 50px;
+  width: fit-content;
+  margin: 0 auto;
+  animation: fadeIn 0.5s ease-out;
 }
 
-.numbers-row:last-child {
-  border-bottom: none;
+[data-theme='dark'] .numbers-row {
+  background-color: rgba(255,255,255,0.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .lotto-ball {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.1rem;
   color: #fff;
   background-color: #007bff;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: inset -3px -3px 8px rgba(0,0,0,0.2), 3px 3px 6px rgba(0,0,0,0.15);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .placeholder {
-  color: #888;
+  color: var(--text-color);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+#generate-lotto {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  font-weight: 600;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+}
+
+#generate-lotto:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
 }
