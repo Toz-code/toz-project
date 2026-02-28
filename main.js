@@ -28,4 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  const adUnits = document.querySelectorAll('.adsbygoogle');
+  adUnits.forEach(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (_) {
+      // Ignore when ad blockers disable the script.
+    }
+  });
 });
