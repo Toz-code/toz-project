@@ -125,6 +125,15 @@ button:hover,
   font-size: 1.05rem;
 }
 
+.article h2 a {
+  color: var(--primary-strong);
+  text-decoration: none;
+}
+
+.article h2 a:hover {
+  text-decoration: underline;
+}
+
 .article p,
 .copy {
   margin: 0;
@@ -170,14 +179,72 @@ textarea {
 }
 
 [data-theme='dark'] input,
+[data-theme='dark'] select,
 [data-theme='dark'] textarea {
   background: rgba(12, 25, 44, 0.85);
 }
 
 input:focus,
+select:focus,
 textarea:focus {
   outline: 2px solid color-mix(in srgb, var(--primary) 65%, white 35%);
   outline-offset: 1px;
+}
+
+select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  color: inherit;
+  font: inherit;
+}
+
+.doc h1 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.doc h2 {
+  margin: 20px 0 8px;
+  font-size: 1.16rem;
+}
+
+.doc-meta {
+  margin: 0 0 8px;
+  font-size: 0.86rem;
+  opacity: 0.8;
+}
+
+.list-block {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.list-block p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.list-block p + p {
+  margin-top: 6px;
+}
+
+.highlight {
+  margin-top: 10px;
+  padding: 14px;
+  border-left: 4px solid var(--primary);
+  border-radius: 10px;
+  background: rgba(10, 126, 164, 0.08);
+  line-height: 1.65;
+}
+
+.doc a {
+  color: var(--primary-strong);
 }
 
 .footer {
