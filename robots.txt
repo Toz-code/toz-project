@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toz-code.github.io/toz-project/sitemap.xml

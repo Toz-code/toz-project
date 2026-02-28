@@ -3,74 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toz Premium Lotto | 제휴 문의</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <title>TOZ Insight | 비즈니스 성장 가이드</title>
+  <meta name="description" content="광고 심사 친화형 정보 콘텐츠, 제휴 문의, 독자 댓글을 제공하는 TOZ Insight 공식 페이지입니다." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-  <h1>TOZ PREMIUM</h1>
-  
-  <div class="controls">
-    <button id="theme-toggle">Switch Mode</button>
-  </div>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">TOZ Insight</div>
+      <nav>
+        <a href="index.html">홈</a>
+        <a href="about.html">소개</a>
+        <a href="contact.html">문의</a>
+        <a href="privacy.html">개인정보</a>
+        <a href="terms.html">이용약관</a>
+      </nav>
+      <button id="theme-toggle" type="button">다크 모드</button>
+    </header>
 
-  <div class="lotto-container">
-    <h2>Lotto Number Generator</h2>
-    <div id="lotto-results" class="results-container">
-      <span class="placeholder">Unlock your 5 lucky sets of numbers</span>
-    </div>
-    <button id="generate-lotto">Generate Lucky Numbers</button>
-  </div>
+    <section class="card hero">
+      <h1>브랜드 성장과 운영 효율을 다루는 실무형 콘텐츠</h1>
+      <p>
+        TOZ Insight는 소상공인, 1인 사업자, 스타트업 실무자를 위한 정보형 콘텐츠를 제공합니다.
+        실제 운영에 필요한 마케팅, 고객 응대, 전환율 개선, 데이터 해석 방법을 정리해 독립적인 관점으로 발행합니다.
+      </p>
+      <p class="notice">
+        본 사이트는 정책 페이지와 문의 채널을 공개하며, 허위 클릭 유도·과도한 광고 배치를 사용하지 않습니다.
+      </p>
+    </section>
 
-  <section class="contact-container">
-    <h2>제휴 문의</h2>
-    <p class="contact-description">아래 폼으로 내용을 보내주시면 확인 후 연락드리겠습니다.</p>
-    <form
-      action="https://formspree.io/f/mbdabpjo"
-      method="POST"
-      class="partner-form"
-    >
-      <label for="company">회사명</label>
-      <input id="company" name="company" type="text" required>
+    <h2 class="section-title">최신 가이드</h2>
+    <section class="grid">
+      <article class="card article">
+        <h2>1) 첫 랜딩페이지에서 이탈률 줄이는 체크리스트</h2>
+        <p>
+          핵심 가치 제안은 3초 안에 이해되어야 하며, CTA 버튼은 하나의 행동만 유도해야 합니다.
+          폼 입력 항목을 줄이고 신뢰 요소(리뷰, 운영 정보, 정책 링크)를 가까운 위치에 두면 전환율이 개선됩니다.
+        </p>
+      </article>
+      <article class="card article">
+        <h2>2) 광고 클릭 이후 구매 전환이 낮을 때 보는 지표</h2>
+        <p>
+          CTR보다 세션 품질 지표를 먼저 봐야 합니다. 유입 경로별 체류시간, 스크롤 깊이, 문의 전환율을 함께 보면
+          광고 소재 문제인지 페이지 구조 문제인지 원인을 분리할 수 있습니다.
+        </p>
+      </article>
+      <article class="card article">
+        <h2>3) 고객 문의 응답 속도가 매출에 주는 영향</h2>
+        <p>
+          평균 1시간 내 1차 응답 체계를 만들면 미응답 이탈을 크게 줄일 수 있습니다.
+          자주 묻는 질문 템플릿과 명확한 후속 일정 안내는 신뢰도와 재문의율을 동시에 높입니다.
+        </p>
+      </article>
+      <article class="card article">
+        <h2>4) 월간 콘텐츠 운영 캘린더 만드는 법</h2>
+        <p>
+          주 1회 발행이라도 주제를 문제 해결형으로 고정하면 검색 유입이 누적됩니다.
+          발행 후에는 제목 클릭률과 평균 읽기 시간을 기록해 다음 글에 반영하는 방식이 효과적입니다.
+        </p>
+      </article>
+    </section>
 
-      <label for="name">담당자명</label>
-      <input id="name" name="name" type="text" required>
+    <h2 class="section-title">제휴 문의</h2>
+    <section class="card">
+      <p class="copy">콘텐츠 제휴 또는 비즈니스 협업 문의는 아래 양식으로 접수됩니다.</p>
+      <form action="https://formspree.io/f/mbdabpjo" method="POST">
+        <label for="company">회사명</label>
+        <input id="company" name="company" type="text" required />
 
-      <label for="email">이메일</label>
-      <input id="email" name="email" type="email" required>
+        <label for="name">담당자명</label>
+        <input id="name" name="name" type="text" required />
 
-      <label for="message">문의 내용</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="email">이메일</label>
+        <input id="email" name="email" type="email" required />
 
-      <input type="hidden" name="_subject" value="TOZ PREMIUM 제휴 문의">
-      <button type="submit" class="submit-btn">문의 보내기</button>
-    </form>
-  </section>
+        <label for="message">문의 내용</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-  <section class="comments-container">
-    <h2>댓글</h2>
-    <div id="disqus_thread"></div>
-    <script>
-      /*
-      var disqus_config = function () {
-        this.page.url = PAGE_URL;
-        this.page.identifier = PAGE_IDENTIFIER;
-      };
-      */
-      (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://toz-project.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>
-      Please enable JavaScript to view the
-      <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
-  </section>
+        <input type="hidden" name="_subject" value="TOZ Insight 제휴 문의" />
+        <button type="submit">문의 보내기</button>
+      </form>
+    </section>
+
+    <h2 class="section-title">댓글</h2>
+    <section class="card">
+      <div id="disqus_thread"></div>
+      <script>
+        (function () {
+          var d = document;
+          var s = d.createElement('script');
+          s.src = 'https://toz-project.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+    </section>
+
+    <footer class="footer">
+      <span>© 2026 TOZ Insight</span>
+      <a href="about.html">사이트 소개</a>
+      <a href="contact.html">문의하기</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+    </footer>
+  </main>
 
   <script src="main.js"></script>
 </body>
